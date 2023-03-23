@@ -1,6 +1,10 @@
 # fish-like features
 zsh-users/zsh-autosuggestions
-zsh-users/zsh-syntax-highlighting
+zdharma-continuum/fast-syntax-highlighting
+olets/zsh-abbr
 
 # intelligent handling of matching delimiters
 hlissner/zsh-autopair
+
+# more autocompletions
+zsh-users/zsh-completions

@@ -121,8 +121,17 @@ alias grep='grep --color=auto'
 # Prompt
 PS1="%F{blue}%n%f%F{white} %~ > %f"
 
-# Activate plugins from antibody
-source "$ZDOTDIR/plugins.sh"
+# Activate plugins from antidote
+zsh_plugins=$ZDOTDIR/.zsh_plugins
+
+fpath+=($ZDOTDIR/.antidote)
+autoload -Uz $fpath[-1]/antidote
+
+if [[ ! $zsh_plugins.zsh -nt $zsh_plugins.txt ]]; then
+  (antidote bundle < $zsh_plugins.txt >| $zsh_plugins.zsh)
+fi
+
+source $zsh_plugins.zsh
 
 # Plugins keybindings
 bindkey '^ ' autosuggest-accept     # Ctrl-Space
