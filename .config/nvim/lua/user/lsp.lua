@@ -119,8 +119,6 @@ if not ok then
 end
 null_ls.setup()
 
-mason_null_ls.setup_handlers()
-
 local ok, fidget = pcall(require, 'fidget')
 if not ok then
     print 'Could not load fidget!'
