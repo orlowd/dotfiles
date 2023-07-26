@@ -37,7 +37,10 @@ return packer.startup(function(use)
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'             -- Neovim LSP client configurations
 
-    use 'j-hui/fidget.nvim'                 -- Useful status updates for LSP
+    use {
+        'j-hui/fidget.nvim',                -- Useful status updates for LSP
+        tag = 'legacy'
+    }
 
     use 'tamago324/nlsp-settings.nvim'      -- Language server settings defined in json
     use 'jose-elias-alvarez/null-ls.nvim'   -- LSP for formatters and linters
